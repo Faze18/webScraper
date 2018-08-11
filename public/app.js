@@ -38,11 +38,11 @@ $( document ).on( "click", "#scrape", function () {
     $.ajax( {
         method: "GET",
         url: "/scrape"
-    } )
-    setTimeout(function(){window.location.reload()},1000).then(function(err)
+    } ).then(function(err)
     {if (err)
     {throw err};
-    })
+    });
+    setTimeout(function(){window.location.reload()},1000)
 });
 
 // Whenever someone clicks a p tag
