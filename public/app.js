@@ -39,7 +39,10 @@ $( document ).on( "click", "#scrape", function () {
         method: "GET",
         url: "/scrape"
     } )
-    setTimeout(function(){window.location.reload()},1000);
+    setTimeout(function(){window.location.reload()},1000).then(function(err)
+    {if (err)
+    {throw err};
+    })
 });
 
 // Whenever someone clicks a p tag
