@@ -163,6 +163,6 @@ app.post( "/articles/:id", function ( req, res ) {
 } );
 
 // Start the server
-app.listen( PORT, function () {
+app.listen( MONGODB_URI, function () {
   console.log( "App running on port " + PORT + "!" );
 } );
